@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "EHCXgZ59xcSI/dVerLu3JIkASIjQ84AaZvjxPgDTRcf7ikSafY05gJDK/4heBnxnrvbcOL3Zrqrlk/XPHi7SDA==",
+  "dgSpecHash": "7ezoIdhzoDOphZlGDHMT2A7URwyecVB3mC/isH1x/xvndbm8JlxVVuJuMkcNOnVg1dcZFiPsLfdeqNTHh++Urw==",
   "success": true,
   "projectFilePath": "C:\\Users\\Vladilen\\Documents\\ConsultantPlus\\ConsultantPlus.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Vladilen\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512"
+  ],
   "logs": []
 }

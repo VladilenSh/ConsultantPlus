@@ -7,6 +7,19 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
+        <Rectangle HorizontalAlignment="Left" Height="82" Margin="10,94,0,0" Stroke="Black" VerticalAlignment="Top" Width="150"/>
+        <ComboBox x:Name="comboBox" HorizontalAlignment="Left" Margin="19,119,0,0" VerticalAlignment="Top" Width="135"/>
+        <TextBlock x:Name="textBlock2" HorizontalAlignment="Left" Margin="74,98,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="80"><Run Language="ru-ru" Text="Пользователи"/></TextBlock>
+        <Rectangle HorizontalAlignment="Left" Height="70" Margin="10,10,0,0" Stroke="Black" VerticalAlignment="Top" Width="150"/>
+        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="19,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Text="Вход не выполнен"/>
+        <TextBlock x:Name="textBlock1" HorizontalAlignment="Left" Margin="19,31,0,0" TextWrapping="Wrap" Text="Test user" VerticalAlignment="Top" Height="26" Width="168" FontSize="16">
+            <TextBlock.Effect>
+                <DropShadowEffect/>
+            </TextBlock.Effect>
+        </TextBlock>
+        <Button x:Name="button" Content="Выход" HorizontalAlignment="Left" Margin="19,147,0,0" VerticalAlignment="Top" Width="60" Click="btnLogIn_Click"/>
+        <Button x:Name="button1" Content="Вход" HorizontalAlignment="Left" Margin="103,147,0,0" VerticalAlignment="Top" Width="51" Click="btnLogOut_Click"/>
+        <CheckBox x:Name="checkBox" Content="Менеджер" HorizontalAlignment="Left" Margin="14,62,0,0" VerticalAlignment="Top" Width="89" IsEnabled="False"/>
 
     </Grid>
 </Window>

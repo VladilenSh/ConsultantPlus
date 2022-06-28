@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConsultantPlus.person
+namespace ConsultantPlus
 {
     internal class Person
     {
@@ -15,7 +15,16 @@ namespace ConsultantPlus.person
         private string passportData;
         private List<string> changingData;
 
-        public Person(string firstName, string lastName, string patronymic, string phoneNumber, string passportData)
+        public Person()
+        {
+            this.firstName = "11";
+            this.lastName = "22";
+            this.patronymic = "33";
+            this.phoneNumber = "44";
+            this.passportData = "55";
+        }
+
+            public Person(string firstName, string lastName, string patronymic, string phoneNumber, string passportData)
         {
             this.firstName = firstName;
             this.lastName = lastName;
