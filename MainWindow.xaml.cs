@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using ConsultantPlus.control;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -22,25 +23,24 @@ namespace ConsultantPlus
 
     public partial class MainWindow : Window
     {
-        List<Manager> managers = new List<Manager>();
-        List<Consultant> consultants = new List<Consultant>();
-        List<Client> clients = new List<Client>();
+        
 
         public MainWindow()
         {
+            
             InitializeComponent();
         }
 
         private void btnLogOut_Click(object sender, RoutedEventArgs e)
         {
-            Client client = new Client("Вася","Васильев","Васильевич","123456","0101 235689") {};
-            string str = JsonConvert.SerializeObject(client);
-            File.AppendAllText(@"file.json", str, Encoding.Default);
+            //Manager client = new Manager("Вася","Васильев","Васильевич","123456","0101 235689",10000, DateTime.Now.ToString("dd.MM.yyyy")) {};
+            //string str = JsonConvert.SerializeObject(client);
+            //File.AppendAllText(@"file.json", str+"\n", Encoding.Default);
         }
 
         private void btnLogIn_Click(object sender, RoutedEventArgs e)
         {
-
+            comboBox.ItemsSource = StartAppLoadData.readJsonFile();
         }
     }
 }
