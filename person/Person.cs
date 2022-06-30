@@ -43,7 +43,7 @@ namespace ConsultantPlus
 
         public override string? ToString()
         {
-            return firstName + this.GetType();
+            return firstName + " " +lastName+ " " + this.GetType();
         }
     }
 }

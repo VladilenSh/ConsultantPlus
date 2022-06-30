@@ -2,6 +2,7 @@
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -40,7 +41,22 @@ namespace ConsultantPlus
 
         private void btnLogIn_Click(object sender, RoutedEventArgs e)
         {
-            comboBox.ItemsSource = StartAppLoadData.readJsonFile();
+            List<Person> tmpList = new List<Person>();
+
+            tmpList.AddRange(StartAppLoadData.readJsonFileManager());
+            tmpList.AddRange(StartAppLoadData.readJsonFileConsultant());
+
+           comboBox.ItemsSource = tmpList;
+        }
+
+        private void btnClose_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
+
+        private void Window_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            this.DragMove();
         }
     }
 }
