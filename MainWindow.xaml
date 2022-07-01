@@ -28,6 +28,14 @@
         </Border>
         <Button x:Name="btnClose" Content="Выход из приложения" Width="150" Click="btnClose_Click" HorizontalAlignment="Center" Canvas.Left="10" Canvas.Top="418" VerticalAlignment="Top"/>
         <Button x:Name="btnScale" Content="Маштаб" Click="button2_Click" HorizontalAlignment="Left" Canvas.Left="177" Canvas.Top="418" VerticalAlignment="Top"/>
+        
     </Canvas>
-
+    <Window.ContextMenu>
+        <ContextMenu>
+            <MenuItem Header="1"></MenuItem>
+            <MenuItem Header="2"></MenuItem>
+            <MenuItem Header="Маштаб" Click="MenuItem_Click"></MenuItem>
+            <MenuItem x:Name="close" Header="Выход из приложения" MouseLeftButtonDown="close_MouseLeftButtonDown" Click="close_Click"></MenuItem>
+        </ContextMenu>
+    </Window.ContextMenu>
 </Window>

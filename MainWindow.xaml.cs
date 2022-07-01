@@ -19,15 +19,14 @@ using System.Windows.Shapes;
 
 namespace ConsultantPlus
 {
-
-
-
     public partial class MainWindow : Window
-    {        
+    {
+        
 
         public MainWindow()
         {            
-            InitializeComponent();            
+            InitializeComponent();
+            comboBox.ItemsSource = StartAppLoadData.CreateListPersonal();
         }
 
         private void btnLogOut_Click(object sender, RoutedEventArgs e)
@@ -39,12 +38,7 @@ namespace ConsultantPlus
 
         private void btnLogIn_Click(object sender, RoutedEventArgs e)
         {
-            List<Person> tmpList = new List<Person>();
-
-            tmpList.AddRange(StartAppLoadData.readJsonFileManager());
-            tmpList.AddRange(StartAppLoadData.readJsonFileConsultant());
-
-            comboBox.ItemsSource = tmpList;
+            
         }
 
         private void btnClose_Click(object sender, RoutedEventArgs e)
@@ -59,39 +53,22 @@ namespace ConsultantPlus
 
         private void button2_Click(object sender, RoutedEventArgs e)
         {
-            var scaler = mainPanel.LayoutTransform as ScaleTransform;
+            WindowSkale.Skale1_25(this);
+        }
 
-            if (scaler == null)
-            {                
-                mainPanel.LayoutTransform = new ScaleTransform(1.25, 1.25);
-                this.Height = 560;
-                this.Width = 1000;
-            }
-            else
-            {
-                double curZoomFactor = scaler.ScaleX;                
+        private void close_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            
+        }
 
-                if (scaler.HasAnimatedProperties)
-                {                    
-                    scaler.BeginAnimation(ScaleTransform.ScaleXProperty, null);
-                    scaler.BeginAnimation(ScaleTransform.ScaleYProperty, null);
-                }
+        private void close_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
 
-                if (curZoomFactor == 1.0)
-                {
-                    scaler.ScaleX = 1.25;
-                    scaler.ScaleY = 1.25;
-                    this.Height = 560;
-                    this.Width = 1000;
-                }
-                else
-                {
-                    scaler.ScaleX = 1.0;
-                    scaler.ScaleY = 1.0;
-                    this.Height = 448;
-                    this.Width = 800;
-                }
-            }
+        private void MenuItem_Click(object sender, RoutedEventArgs e)
+        {
+            WindowSkale.Skale1_25(this);
         }
     }
 }

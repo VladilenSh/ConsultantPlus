@@ -14,6 +14,16 @@ namespace ConsultantPlus.control
         static List<Consultant> consultants = new List<Consultant>();
         static List<Client> clients = new List<Client>();
 
+        public static List<Person> CreateListPersonal()
+        {
+            List<Person> tmpList = new List<Person>();
+
+            tmpList.AddRange(StartAppLoadData.readJsonFileManager());
+            tmpList.AddRange(StartAppLoadData.readJsonFileConsultant()); 
+            
+            return tmpList;
+        }
+
         public static List<Manager> readJsonFileManager()
         {
             string[] tmpArray = File.ReadAllLines("Manager.json");
@@ -26,6 +36,7 @@ namespace ConsultantPlus.control
 
             return managers;
         }
+
         public static List<Consultant> readJsonFileConsultant()
         {
             string[] tmpArray = File.ReadAllLines("Consultant.json");
@@ -38,6 +49,7 @@ namespace ConsultantPlus.control
 
             return consultants;
         }
+
         public static List<Client> readJsonFileClient()
         {
             string[] tmpArray = File.ReadAllLines("Client.json");
@@ -50,5 +62,6 @@ namespace ConsultantPlus.control
 
             return clients;
         }
+
     }
 }
