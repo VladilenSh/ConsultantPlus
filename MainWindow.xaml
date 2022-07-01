@@ -26,8 +26,8 @@
         <Border BorderBrush="Black" BorderThickness="1" Height="430" Width="560" HorizontalAlignment="Left" Canvas.Left="230" Canvas.Top="10" VerticalAlignment="Center">
             <ListBox x:Name="listBox" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="9,9,9,9"/>
         </Border>
-        <Button x:Name="btnClose" Content="Выход из приложения" Width="150" Click="btnClose_Click" HorizontalAlignment="Left" Canvas.Left="10" Canvas.Top="420" VerticalAlignment="Top"/>
-        <Button x:Name="btnScale" Content="Маштаб" Click="button2_Click" HorizontalAlignment="Left" Canvas.Left="65" Canvas.Top="327" VerticalAlignment="Top"/>
+        <Button x:Name="btnClose" Content="Выход из приложения" Width="150" Click="btnClose_Click" HorizontalAlignment="Center" Canvas.Left="10" Canvas.Top="418" VerticalAlignment="Top"/>
+        <Button x:Name="btnScale" Content="Маштаб" Click="button2_Click" HorizontalAlignment="Left" Canvas.Left="177" Canvas.Top="418" VerticalAlignment="Top"/>
     </Canvas>
 
 </Window>

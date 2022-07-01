@@ -23,14 +23,11 @@ namespace ConsultantPlus
 
 
     public partial class MainWindow : Window
-    {
-        
+    {        
 
         public MainWindow()
         {            
-            InitializeComponent();
-
-            
+            InitializeComponent();            
         }
 
         private void btnLogOut_Click(object sender, RoutedEventArgs e)
@@ -65,27 +62,17 @@ namespace ConsultantPlus
             var scaler = mainPanel.LayoutTransform as ScaleTransform;
 
             if (scaler == null)
-            {
-                // Currently no zoom, so go instantly to max zoom.
+            {                
                 mainPanel.LayoutTransform = new ScaleTransform(1.25, 1.25);
                 this.Height = 560;
                 this.Width = 1000;
             }
             else
             {
-                double curZoomFactor = scaler.ScaleX;
-
-                // If the current ScaleX and ScaleY properties were set by animation,
-                // we'll have to remove the animation before we can explicitly set
-                // them to "local" values.
+                double curZoomFactor = scaler.ScaleX;                
 
                 if (scaler.HasAnimatedProperties)
-                {
-                    // Remove the animation by assigning a null
-                    // AnimationTimeline to the properties.
-                    // Note that this causes them to revert to
-                    // their most recently assigned "local" values.
-
+                {                    
                     scaler.BeginAnimation(ScaleTransform.ScaleXProperty, null);
                     scaler.BeginAnimation(ScaleTransform.ScaleYProperty, null);
                 }
