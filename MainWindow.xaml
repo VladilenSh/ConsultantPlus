@@ -5,29 +5,29 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ConsultantPlus"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800" ResizeMode="NoResize"  WindowStartupLocation="CenterScreen" WindowStyle="None" MouseDown="Window_MouseDown">
-    <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="113*"/>
-            <ColumnDefinition Width="47*"/>
-        </Grid.ColumnDefinitions>
-        <Rectangle HorizontalAlignment="Left" Height="82" Margin="10,94,0,0" Stroke="Black" VerticalAlignment="Top" Width="150"/>
-        <ComboBox x:Name="comboBox" HorizontalAlignment="Left" Margin="19,119,0,0" VerticalAlignment="Top" Width="135"/>
-        <TextBlock x:Name="textBlock2" HorizontalAlignment="Left" Margin="74,98,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="80"><Run Language="ru-ru" Text="Пользователи"/></TextBlock>
-        <Rectangle HorizontalAlignment="Left" Height="70" Margin="10,10,0,0" Stroke="Black" VerticalAlignment="Top" Width="150"/>
-        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="19,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Text="Вход не выполнен"/>
-        <TextBlock x:Name="textBlock1" HorizontalAlignment="Left" Margin="19,31,0,0" TextWrapping="Wrap" Text="Test user" VerticalAlignment="Top" Height="26" Width="135" FontSize="16">
+        Title="MainWindow" Height="448" Width="800" ResizeMode="NoResize"  WindowStartupLocation="CenterScreen" WindowStyle="None" MouseDown="Window_MouseDown">
+    <Window.Background>
+        <ImageBrush ImageSource="/appBack.jpg" />
+    </Window.Background>
+    <Canvas x:Name="mainPanel">
+        <Rectangle Height="82" Stroke="Black" Width="215" HorizontalAlignment="Left" Canvas.Left="10" Canvas.Top="94" VerticalAlignment="Center"/>
+        <ComboBox x:Name="comboBox" Width="203" HorizontalAlignment="Left" Canvas.Left="14" Canvas.Top="119" VerticalAlignment="Center"/>
+        <TextBlock x:Name="textBlock2" TextWrapping="Wrap" Width="80" HorizontalAlignment="Left" Canvas.Left="74" Canvas.Top="98" VerticalAlignment="Top"><Run Language="ru-ru" Text="Пользователи"/></TextBlock>
+        <Rectangle Height="70" Stroke="Black" Width="215" HorizontalAlignment="Left" Canvas.Left="10" Canvas.Top="10" VerticalAlignment="Center"/>
+        <TextBlock x:Name="textBlock" TextWrapping="Wrap" Width="120" Text="Вход не выполнен" HorizontalAlignment="Left" Canvas.Left="19" Canvas.Top="10" VerticalAlignment="Top"/>
+        <TextBlock x:Name="textBlock1" TextWrapping="Wrap" Text="Test user" Height="26" Width="135" FontSize="16" HorizontalAlignment="Left" Canvas.Left="19" Canvas.Top="31" VerticalAlignment="Top">
             <TextBlock.Effect>
                 <DropShadowEffect/>
             </TextBlock.Effect>
         </TextBlock>
-        <Button x:Name="button" Content="Выход" HorizontalAlignment="Left" Margin="19,147,0,0" VerticalAlignment="Top" Width="60" Click="btnLogIn_Click"/>
-        <Button x:Name="button1" Content="Вход" HorizontalAlignment="Left" Margin="103,147,0,0" VerticalAlignment="Top" Width="51" Click="btnLogOut_Click"/>
-        <CheckBox x:Name="checkBox" Content="Менеджер" HorizontalAlignment="Left" Margin="14,62,0,0" VerticalAlignment="Top" Width="89" IsEnabled="False"/>
-        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="430" Margin="165,0,0,0" VerticalAlignment="Center" Width="625" Grid.ColumnSpan="2">
+        <Button x:Name="button" Content="Выход" Width="60" Click="btnLogIn_Click" HorizontalAlignment="Left" Canvas.Left="19" Canvas.Top="147" VerticalAlignment="Top"/>
+        <Button x:Name="button1" Content="Вход" Width="51" Click="btnLogOut_Click" HorizontalAlignment="Left" Canvas.Left="103" Canvas.Top="147" VerticalAlignment="Top"/>
+        <CheckBox x:Name="checkBox" Content="Менеджер" Width="89" IsEnabled="False" HorizontalAlignment="Left" Canvas.Left="14" Canvas.Top="62" VerticalAlignment="Top"/>
+        <Border BorderBrush="Black" BorderThickness="1" Height="430" Width="560" HorizontalAlignment="Left" Canvas.Left="230" Canvas.Top="10" VerticalAlignment="Center">
             <ListBox x:Name="listBox" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="9,9,9,9"/>
         </Border>
-        <Button x:Name="btnClose" Content="Выход из приложения" HorizontalAlignment="Left" Margin="10,420,0,0" VerticalAlignment="Top" Width="150" Click="btnClose_Click"/>
+        <Button x:Name="btnClose" Content="Выход из приложения" Width="150" Click="btnClose_Click" HorizontalAlignment="Left" Canvas.Left="10" Canvas.Top="420" VerticalAlignment="Top"/>
+        <Button x:Name="btnScale" Content="Маштаб" Click="button2_Click" HorizontalAlignment="Left" Canvas.Left="65" Canvas.Top="327" VerticalAlignment="Top"/>
+    </Canvas>
 
-    </Grid>
 </Window>

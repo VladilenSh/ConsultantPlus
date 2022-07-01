@@ -20,16 +20,17 @@ using System.Windows.Shapes;
 namespace ConsultantPlus
 {
 
-    
+
 
     public partial class MainWindow : Window
     {
         
 
         public MainWindow()
-        {
-            
+        {            
             InitializeComponent();
+
+            
         }
 
         private void btnLogOut_Click(object sender, RoutedEventArgs e)
@@ -46,7 +47,7 @@ namespace ConsultantPlus
             tmpList.AddRange(StartAppLoadData.readJsonFileManager());
             tmpList.AddRange(StartAppLoadData.readJsonFileConsultant());
 
-           comboBox.ItemsSource = tmpList;
+            comboBox.ItemsSource = tmpList;
         }
 
         private void btnClose_Click(object sender, RoutedEventArgs e)
@@ -57,6 +58,53 @@ namespace ConsultantPlus
         private void Window_MouseDown(object sender, MouseButtonEventArgs e)
         {
             this.DragMove();
+        }
+
+        private void button2_Click(object sender, RoutedEventArgs e)
+        {
+            var scaler = mainPanel.LayoutTransform as ScaleTransform;
+
+            if (scaler == null)
+            {
+                // Currently no zoom, so go instantly to max zoom.
+                mainPanel.LayoutTransform = new ScaleTransform(1.25, 1.25);
+                this.Height = 560;
+                this.Width = 1000;
+            }
+            else
+            {
+                double curZoomFactor = scaler.ScaleX;
+
+                // If the current ScaleX and ScaleY properties were set by animation,
+                // we'll have to remove the animation before we can explicitly set
+                // them to "local" values.
+
+                if (scaler.HasAnimatedProperties)
+                {
+                    // Remove the animation by assigning a null
+                    // AnimationTimeline to the properties.
+                    // Note that this causes them to revert to
+                    // their most recently assigned "local" values.
+
+                    scaler.BeginAnimation(ScaleTransform.ScaleXProperty, null);
+                    scaler.BeginAnimation(ScaleTransform.ScaleYProperty, null);
+                }
+
+                if (curZoomFactor == 1.0)
+                {
+                    scaler.ScaleX = 1.25;
+                    scaler.ScaleY = 1.25;
+                    this.Height = 560;
+                    this.Width = 1000;
+                }
+                else
+                {
+                    scaler.ScaleX = 1.0;
+                    scaler.ScaleY = 1.0;
+                    this.Height = 448;
+                    this.Width = 800;
+                }
+            }
         }
     }
 }

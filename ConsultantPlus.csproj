@@ -9,11 +9,19 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="appBack.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Content Include="resources\consultant_96680.ico" />
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="appBack.jpg" />
   </ItemGroup>
 
 </Project>
