@@ -53,8 +53,8 @@ namespace ConsultantPlus
         }
 
         private void Window_MouseDown(object sender, MouseButtonEventArgs e)
-        {
-            this.DragMove();
+        {            
+            if (e.ChangedButton == MouseButton.Left) this.DragMove();
         }
 
         private void button2_Click(object sender, RoutedEventArgs e)
