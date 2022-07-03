@@ -5,13 +5,36 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ConsultantPlus"
         mc:Ignorable="d"
-        Title="MainWindow" Height="448" Width="800" ResizeMode="NoResize"  WindowStartupLocation="CenterScreen" WindowStyle="None" MouseDown="Window_MouseDown">
-    <Window.Background>
-        <ImageBrush ImageSource="/appBack.jpg" />
-    </Window.Background>
+        Title="MainWindow" Height="448" Width="800" ResizeMode="NoResize"  WindowStartupLocation="CenterScreen" 
+        WindowStyle="None" MouseDown="Window_MouseDown" AllowsTransparency="True" Background="Transparent">
+    
+   
     <Canvas x:Name="mainPanel">
+        <Canvas.Clip>
+            <RectangleGeometry x:Name="Circle1" Rect="0,0,800,448" RadiusX="10" RadiusY="10"/>
+        </Canvas.Clip>
+        <Canvas.Background>
+            <ImageBrush ImageSource="/appBack.jpg"/>
+        </Canvas.Background>
         <Rectangle Height="82" Stroke="Black" Width="215" HorizontalAlignment="Left" Canvas.Left="10" Canvas.Top="94" VerticalAlignment="Center"/>
-        <ComboBox x:Name="comboBox" Width="203" HorizontalAlignment="Left" Canvas.Left="14" Canvas.Top="119" VerticalAlignment="Center"/>
+        <ComboBox x:Name="comboBox" Width="203" HorizontalAlignment="Left" Canvas.Left="14" Canvas.Top="119" VerticalAlignment="Center">
+            <ComboBox.Resources>
+                <Style TargetType="{x:Type ComboBox}">
+                    <!--<Setter Property="Background" Value="Blue"/>
+                    <Setter Property="Foreground" Value="White"/>-->
+                    <!--<Style.Triggers>
+                        <Trigger Property="ComboBox.AlternationIndex" Value="1">
+                            <Setter Property="Background" Value="White"/>
+                            <Setter Property="Foreground" Value="Black"/>
+                        </Trigger>
+                        <Trigger Property="ComboBox.AlternationIndex" Value="0">
+                            <Setter Property="Background" Value="DarkBlue"/>
+                            <Setter Property="Foreground" Value="White"/>
+                        </Trigger>
+                    </Style.Triggers>-->
+                </Style>
+            </ComboBox.Resources>
+            </ComboBox>
         <TextBlock x:Name="textBlock2" TextWrapping="Wrap" Width="80" HorizontalAlignment="Left" Canvas.Left="74" Canvas.Top="98" VerticalAlignment="Top"><Run Language="ru-ru" Text="Пользователи"/></TextBlock>
         <Rectangle Height="70" Stroke="Black" Width="215" HorizontalAlignment="Left" Canvas.Left="10" Canvas.Top="10" VerticalAlignment="Center"/>
         <TextBlock x:Name="textBlock" TextWrapping="Wrap" Width="120" Text="Вход не выполнен" HorizontalAlignment="Left" Canvas.Left="19" Canvas.Top="10" VerticalAlignment="Top"/>
@@ -24,13 +47,30 @@
         <Button x:Name="button1" Content="Вход" Width="51" Click="btnLogOut_Click" HorizontalAlignment="Left" Canvas.Left="103" Canvas.Top="147" VerticalAlignment="Top"/>
         <CheckBox x:Name="checkBox" Content="Менеджер" Width="89" IsEnabled="False" HorizontalAlignment="Left" Canvas.Left="14" Canvas.Top="62" VerticalAlignment="Top"/>
         <Border BorderBrush="Black" BorderThickness="1" Height="430" Width="560" HorizontalAlignment="Left" Canvas.Left="230" Canvas.Top="10" VerticalAlignment="Center">
-            <ListBox x:Name="listBox" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="9,9,9,9"/>
+            <ListBox x:Name="listBox" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="9,9,9,9">
+                <ListBox.Resources>
+                    <Style TargetType="{x:Type ListBoxItem}">
+                        <Setter Property="Background" Value="Blue"/>
+                        <Setter Property="Foreground" Value="White"/>
+                        <Style.Triggers>
+                            <Trigger Property="ListBox.AlternationIndex" Value="1">
+                                <Setter Property="Background" Value="White"/>
+                                <Setter Property="Foreground" Value="Black"/>
+                            </Trigger>
+                            <Trigger Property="ListBox.AlternationIndex" Value="0">
+                                <Setter Property="Background" Value="DarkBlue"/>
+                                <Setter Property="Foreground" Value="White"/>
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </ListBox.Resources>
+            </ListBox>
         </Border>
         <Button x:Name="btnClose" Content="Выход из приложения" Width="150" Click="btnClose_Click" HorizontalAlignment="Center" Canvas.Left="10" Canvas.Top="418" VerticalAlignment="Top"/>
         <Button x:Name="btnScale" Content="Маштаб" Click="button2_Click" HorizontalAlignment="Left" Canvas.Left="177" Canvas.Top="418" VerticalAlignment="Top"/>
         
     </Canvas>
-    <Window.ContextMenu>
+    <Window.ContextMenu >
         <ContextMenu>
             <MenuItem Header="1"></MenuItem>
             <MenuItem Header="2"></MenuItem>

@@ -21,6 +21,7 @@ namespace ConsultantPlus.control
                 w.mainPanel.LayoutTransform = new ScaleTransform(1.25, 1.25);
                 w.Height = 560;
                 w.Width = 1000;
+                
             }
             else
             {
