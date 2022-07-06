@@ -19,7 +19,7 @@
         <Rectangle Height="82" Stroke="Black" Width="215" HorizontalAlignment="Left" Canvas.Left="10" Canvas.Top="94" VerticalAlignment="Center"/>
         <ComboBox x:Name="comboBox" Width="203" HorizontalAlignment="Left" Canvas.Left="14" 
                   Canvas.Top="119" VerticalAlignment="Center"
-                  >
+                  DataContext="{StaticResource StartAppLoadData.clients}">
             <ComboBox.Resources>
                 <Style TargetType="{x:Type ComboBox}">
                     <!--<Setter Property="Background" Value="Blue"/>

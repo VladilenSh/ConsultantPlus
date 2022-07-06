@@ -19,15 +19,17 @@ using System.Windows.Shapes;
 
 namespace ConsultantPlus
 {
-    public partial class MainWindow : Window
+    public partial class MainWindow : Window, INotifyPropertyChanged
     {
         
 
         public MainWindow()
         {            
             InitializeComponent();
-            comboBox.ItemsSource = StartAppLoadData.CreateListPersonal();
+           //comboBox.ItemsSource = StartAppLoadData.CreateListPersonal();
         }
+
+        public event PropertyChangedEventHandler? PropertyChanged;
 
         private void btnLogOut_Click(object sender, RoutedEventArgs e)
         {

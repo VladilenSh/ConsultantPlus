@@ -1,6 +1,7 @@
 ﻿using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -12,7 +13,7 @@ namespace ConsultantPlus.control
     {
         static List<Manager> managers = new List<Manager>();
         static List<Consultant> consultants = new List<Consultant>();
-        static List<Client> clients = new List<Client>();
+        public static List<Client> clients = new List<Client>();
 
         public static List<Person> CreateListPersonal()
         {
