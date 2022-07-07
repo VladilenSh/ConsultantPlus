@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET6_0;NETCOREAPP
 C:\Users\Vladilen\Documents\ConsultantPlus\App.xaml
-2-266957298
+22133097973
 11356686734
-13-1720960725
+13-676472028
 195-1443936591
-MainWindow.xaml;resources\Dictionary1.xaml;
+resources\Dictionary1.xaml;View\MainWindow.xaml;
 
-True
+False
 

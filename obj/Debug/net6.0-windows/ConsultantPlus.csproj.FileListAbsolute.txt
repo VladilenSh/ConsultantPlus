@@ -4,12 +4,10 @@ C:\Users\Vladilen\Documents\ConsultantPlus\bin\Debug\net6.0-windows\ConsultantPl
 C:\Users\Vladilen\Documents\ConsultantPlus\bin\Debug\net6.0-windows\ConsultantPlus.dll
 C:\Users\Vladilen\Documents\ConsultantPlus\bin\Debug\net6.0-windows\ConsultantPlus.pdb
 C:\Users\Vladilen\Documents\ConsultantPlus\obj\Debug\net6.0-windows\ConsultantPlus.csproj.AssemblyReference.cache
-C:\Users\Vladilen\Documents\ConsultantPlus\obj\Debug\net6.0-windows\MainWindow.g.cs
 C:\Users\Vladilen\Documents\ConsultantPlus\obj\Debug\net6.0-windows\App.g.cs
 C:\Users\Vladilen\Documents\ConsultantPlus\obj\Debug\net6.0-windows\ConsultantPlus_Content.g.cs
 C:\Users\Vladilen\Documents\ConsultantPlus\obj\Debug\net6.0-windows\ConsultantPlus_MarkupCompile.cache
 C:\Users\Vladilen\Documents\ConsultantPlus\obj\Debug\net6.0-windows\ConsultantPlus_MarkupCompile.lref
-C:\Users\Vladilen\Documents\ConsultantPlus\obj\Debug\net6.0-windows\MainWindow.baml
 C:\Users\Vladilen\Documents\ConsultantPlus\obj\Debug\net6.0-windows\ConsultantPlus.g.resources
 C:\Users\Vladilen\Documents\ConsultantPlus\obj\Debug\net6.0-windows\ConsultantPlus.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\Vladilen\Documents\ConsultantPlus\obj\Debug\net6.0-windows\ConsultantPlus.AssemblyInfoInputs.cache
@@ -23,3 +21,5 @@ C:\Users\Vladilen\Documents\ConsultantPlus\obj\Debug\net6.0-windows\ref\Consulta
 C:\Users\Vladilen\Documents\ConsultantPlus\obj\Debug\net6.0-windows\resources\Dictionary1.baml
 C:\Users\Vladilen\Documents\ConsultantPlus\bin\Debug\net6.0-windows\Newtonsoft.Json.dll
 C:\Users\Vladilen\Documents\ConsultantPlus\obj\Debug\net6.0-windows\ConsultantPlus.csproj.CopyComplete
+C:\Users\Vladilen\Documents\ConsultantPlus\obj\Debug\net6.0-windows\View\MainWindow.g.cs
+C:\Users\Vladilen\Documents\ConsultantPlus\obj\Debug\net6.0-windows\View\MainWindow.baml
