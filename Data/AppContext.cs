@@ -11,5 +11,10 @@ namespace ConsultantPlus.Data
         {
             Database.EnsureCreated();
         }
+
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            optionsBuilder.UseSqlServer("server=.;database=myEFCoreDB;trusted_connection=true;");
+        }
     }
 }
